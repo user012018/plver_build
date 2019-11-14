@@ -1,0 +1,14 @@
+*.pyc
+build
+prof/
+docs/_build/
+playhouse/*.c
+playhouse/*.h
+playhouse/*.so
+playhouse/tests/plover_test.db
+.idea/
+MANIFEST
+plover_test.db
+closure.so
+lsm.so
+regexp.so
