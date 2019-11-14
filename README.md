@@ -2,14 +2,17 @@
 Peywee – stand-alone ORM
 ------------------------
 
-git clone https://github.com/user012018/plver_build.git cd plver_build python setup.py install	
+**install**
+
+	git clone https://github.com/user012018/plver_build.git cd plver_build python setup.py install	
 
 
 
 
 future: 
-	pip install libsqlite3	
-	pip install flask-peewee
+-pip install libsqlite3	
+	
+-pip install flask-peewee
 
 
 
