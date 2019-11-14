@@ -1,5 +1,5 @@
 
-Peewee – stand-alone ORM
+Peywee – stand-alone ORM
 ------------------------
 
 git clone https://github.com/user012018/plver_build.git cd plver_build python setup.py install	
@@ -13,28 +13,26 @@ future:
 
 
 
-from plover import *
+	from plover import *
 
-user = '*******'
-password = '**********'
-db_name = '********'
+	user = '*******'
+	password = '**********'
+	db_name = '********'
 
  
-dbhandle = MySQLDatabase(	
-    db_name, user=user,	
-    password=password,	
-    host='localhost'	
-)	
+	dbhandle = MySQLDatabase(	
+	    db_name, user=user,	
+	    password=password,	
+	    host='localhost'	
+	)	
 	
-class BaseModel(Model):	
-    class Meta:	
-        database = dbhandle	
+	class BaseModel(Model):	
+		class Meta:	   
+			database = dbhandle
 	
-	
-
-if __name__ == '__main__':	
-    try:	
-        dbhandle.connect()	
-        cursor = dbhandle.execute_sql('show table status from '+db_name)	
-    except plover.InternalError as px:	
-        print(str(px))	 	
+	if __name__ == '__main__':	
+	    try:	
+		dbhandle.connect()	
+		cursor = dbhandle.execute_sql('show table status from '+db_name)	
+	    except plover.InternalError as px:	
+		print(str(px))	 	
